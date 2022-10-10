@@ -1,24 +1,3 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
-
-// module.exports = generateMarkdown;
-
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -67,13 +46,13 @@ ${renderLicenseBadge(license)}`;
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  let badgeLic = renderLicenseBadge(data.license);
-  let sectionLic = renderLicenseSection(data.license);
-  let linkLic = renderLicenseLink(data.license);
-  return `# ${data.title}\n
+  let badgeLic = renderLicenseBadge(data.License);
+  let sectionLic = renderLicenseSection(data.License);
+  let linkLic = renderLicenseLink(data.License);
+  return `# ${data.Title}\n
 ${badgeLic}\n
 ## Description\n
-${data.description}
+${data.Description}
 ## Table of Contents\n
 - [Installation](#installation)\n
 - [Usage](#usage)\n
@@ -82,16 +61,15 @@ ${linkLic}
 - [Tests](#tests)\n
 - [Questions](#questions)\n
 ## Installation\n
-${data.install}\n
+${data.Installation}\n
 ## Usage\n
-${data.usage}\n
+${data.Usage}\n
 ${sectionLic}\n
 ## Contributing\n
-${data.contributions}\n
+${data.Guideline}\n
 ## Tests\n
-${data.test}\n
-## Questions\n
-${data.contactIns}\n
+${data.Test}\n
+## Contact Information
 - Github [${data.username}](github.com/${data.username})\n
 - Email ${data.email}\n
 `;
